@@ -25,14 +25,22 @@ public class CalculadoraDeTransporte {
 		return custoBasico - getPromocaoVigente();
 	}
 	
-	public double calcularCustoDeEntrega(Cidade origem, Cidade destino) {}
+	public double calcularCustoDeEntrega(Cidade origem, Cidade destino) {
+		double custoEntrega = 2;
+
+		return custoEntrega;
+	}
 	
 	public double calcularImposto(double custoBasico) {
 		/*if (imposto)*/
 		/*else*/ return custoBasico * 0.05;
 	}
 	
-	public double getPromocaoVigente() {}
+	public double getPromocaoVigente() {
+		double producaoVigente = 0;
+
+		return producaoVigente;
+	}
 	
 	public double converterDePesoG(double pesoG) {
 		return Math.ceil(pesoG / 1000);
