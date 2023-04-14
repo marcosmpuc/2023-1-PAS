@@ -26,9 +26,47 @@ public class CalculadoraDeTransporte {
 	}
 	
 	public double calcularCustoDeEntrega(Cidade origem, Cidade destino) {
+		double custoPoa = 25;
+		double custoSp = 10;
+		double custoFp = 20;
+		double custoC = 15;
 		double custoEntrega = 2;
 
-		return custoEntrega;
+		if(origem.getNome()=="Porto Alegre"){
+			if(destino.getNome()=="Florianópolis"){
+				return  custoPoa+custoSp+custoFp;
+			}
+			else if(destino.getNome()=="Curitiba"){
+				return custoC+custoPoa+custoSp;
+			}
+			else if(destino.getNome()=="Porto Alegre"){
+				return custoPoa+custoSp;
+		}
+		}
+		 if(origem.getNome()=="Curitiba"){
+			if(destino.getNome()=="Porto Alegre"){
+				return  custoPoa+custoSp+custoC;
+			}
+			else if(destino.getNome()=="Florianópolis"){
+				return custoC+custoFp+custoSp;
+			}
+			else if(destino.getNome()=="Curitiba"){
+				return custoC+custoSp;
+		}
+		}
+		if(origem.getNome()=="Florianópolis"){
+			if(destino.getNome()=="Porto Alegre"){
+				return  custoPoa+custoSp+custoFp;
+			}
+			else if(destino.getNome()=="Curitiba"){
+				return custoC+custoFp+custoSp;
+			}
+			else if(destino.getNome()=="Florianópolis"){
+					return custoFp+custoSp;
+			}
+		}
+		
+		return -1;
 	}
 	
 	public double calcularImposto(double custoBasico) {
