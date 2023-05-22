@@ -3,7 +3,7 @@ package com.projarq.microservico;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class Informacao {
+public class Information {
     private String moeda;
     private BigDecimal quantidade;
     private BigDecimal valor;
@@ -41,22 +41,22 @@ public class Informacao {
         this.dataHora = dataHora;
     }
 
-    public Informacao moeda(String moeda) {
+    public Information moeda(String moeda) {
         this.moeda = moeda;
         return this;
     }
 
-    public Informacao quantidade(BigDecimal quantidade) {
+    public Information quantidade(BigDecimal quantidade) {
         this.quantidade = quantidade;
         return this;
     }
 
-    public Informacao valor(BigDecimal valor) {
+    public Information valor(BigDecimal valor) {
         this.valor = valor;
         return this;
     }
 
-    public Informacao dataHora(LocalDateTime dataHora) {
+    public Information dataHora(LocalDateTime dataHora) {
         this.dataHora = dataHora;
         return this;
     }
