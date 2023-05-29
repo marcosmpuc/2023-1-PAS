@@ -10,14 +10,16 @@ import java.time.LocalDateTime;
 public class Information {
     @Id
     private Long id;
-    private String moeda;
+    private String from;
+    private String to;
     private BigDecimal quantidade;
     private BigDecimal valor;
     private LocalDateTime dataHora;
+    private String environment;
 
-    public Information(Long id, String moeda, BigDecimal quantidade, BigDecimal valor, LocalDateTime dataHora) {
-        this.id = id;
-        this.moeda = moeda;
+    public Information(String from, String to, BigDecimal quantidade, BigDecimal valor, LocalDateTime dataHora) {
+        this.from = from;
+        this.to = to;
         this.quantidade = quantidade;
         this.valor = valor;
         this.dataHora = dataHora;
@@ -31,12 +33,20 @@ public class Information {
         this.id = id;
     }
 
-    public String getMoeda() {
-        return moeda;
+    public String getFrom() {
+        return from;
     }
 
-    public void setMoeda(String moeda) {
-        this.moeda = moeda;
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
     }
 
     public BigDecimal getQuantidade() {
@@ -61,5 +71,12 @@ public class Information {
 
     public void setDataHora(LocalDateTime dataHora) {
         this.dataHora = dataHora;
+    }
+    public String getEnvironment() {
+        return environment;
+    }
+
+    public void setEnvironment(String environment) {
+        this.environment = environment;
     }
 }
